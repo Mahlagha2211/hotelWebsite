@@ -30,7 +30,7 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
       <Drawer
         open={isOpen}
         onClose={() => setIsOpen(false)}
-        className="z-[100] bg-gray-300"
+        className="z-[100] !bg-gray-300 transition-all duration-1000"
         position="right"
       >
         <DrawerHeader title="MENU" titleIcon={() => <></>} />

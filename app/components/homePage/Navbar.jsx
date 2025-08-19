@@ -19,7 +19,7 @@ export default function Navbar() {
   }, [isOpen]);
 
   return (
-    <header className="flex items-center justify-between lg:px-20 px-5 max-md:h-16 ">
+    <header className="flex items-center justify-between lg:px-20 px-5 max-md:h-16  ">
       <p className="!text-white">
         <span className="text-xl ">Bookme</span>
         <span className="text-sm font-light">.com</span>
