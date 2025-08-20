@@ -4,25 +4,17 @@ import {
   DrawerHeader,
   DrawerItems,
   Sidebar,
-  SidebarItem,
-  SidebarItemGroup,
   SidebarItems,
   TextInput,
 } from "flowbite-react";
+import { IoHome } from "react-icons/io5";
+import { IoPeopleSharp } from "react-icons/io5";
+import { FaQuestionCircle } from "react-icons/fa";
+import { RiHotelFill } from "react-icons/ri";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-import {
-  HiChartPie,
-  HiClipboard,
-  HiCollection,
-  HiInformationCircle,
-  HiLogin,
-  HiPencil,
-  HiSearch,
-  HiShoppingBag,
-  HiUsers,
-} from "react-icons/hi";
+import { HiSearch } from "react-icons/hi";
 export default function DrawerNav({ isOpen, setIsOpen }) {
   const pathname = usePathname();
   return (
@@ -40,8 +32,8 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
             className="[&>div]:bg-transparent [&>div]:p-0 w-full"
           >
             <div className="flex h-full flex-col justify-between py-2">
-              <div>
-                <form className="pb-3 md:hidden ">
+              <div className="space-y-4">
+                <form className=" md:hidden ">
                   <TextInput
                     icon={HiSearch}
                     type="search"
@@ -50,40 +42,49 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
                     size={32}
                   />
                 </form>
-                <SidebarItems className="flex flex-col gap-y-4 text-gray-800 ">
+                <SidebarItems className="flex flex-col gap-y-4 text-gray-800 p-5 rounded-lg bg-[#b4b2b2]">
                   <Link
                     className={`${
-                      pathname == "/" ? "bg-[#b4b2b2]" : ""
-                    } p-2 rounded-lg hover:bg-white`}
+                      pathname == "/" ? "bg-[#e4e4e4]" : ""
+                    } p-2 rounded-lg hover:bg-[#e4e4e4] flex items-center gap-x-2`}
                     href="/"
                   >
+                    <IoHome />
                     Home
                   </Link>
                   <Link
-                    href="/support"
+                    href="/hotel"
                     className={`${
-                      pathname == "/support" ? "bg-[#b4b2b2]" : ""
-                    } p-2 rounded-lg hover:bg-white`}
+                      pathname == "/hotel" ? "bg-[#e4e4e4]" : ""
+                    } p-2 rounded-lg hover:bg-[#e4e4e4] flex items-center gap-x-2`}
                   >
-                    Support
+                    <RiHotelFill />
+                    Hotels
+                  </Link>
+
+                  <Link
+                    href="/about"
+                    className={`${
+                      pathname == "/about" ? "bg-[#e4e4e4]" : ""
+                    } p-2 rounded-lg hover:bg-[#e4e4e4] flex items-center gap-x-2`}
+                  >
+                    <IoPeopleSharp />
+                    About
                   </Link>
                   <Link
-                    href="/tips"
+                    href="/contact"
                     className={`${
-                      pathname == "/tips" ? "bg-[#b4b2b2]" : ""
-                    } p-2 rounded-lg hover:bg-white`}
+                      pathname == "/contact" ? "bg-[#e4e4e4]" : ""
+                    } p-2 rounded-lg hover:bg-[#e4e4e4] flex items-center gap-x-2`}
                   >
-                    Tips
-                  </Link>
-                  <Link
-                    href="/signIn"
-                    className={`${
-                      pathname == "/signIn" ? "bg-[#b4b2b2]" : ""
-                    } p-2 rounded-lg hover:bg-white`}
-                  >
-                    Sign in
+                    <FaQuestionCircle />
+                    Contact
                   </Link>
                 </SidebarItems>
+                <select className="px-7 py-3 bg-[#b4b2b2] w-full rounded-lg border border-[#666666] ">
+                  <option value="darkmode">Dark Mode</option>
+                  <option value="lightmode">Light Mode</option>
+                </select>
               </div>
             </div>
           </Sidebar>

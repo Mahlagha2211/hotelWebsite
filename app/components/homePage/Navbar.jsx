@@ -26,9 +26,9 @@ export default function Navbar() {
       </p>
       <div className="lg:w-[600px] w-[400px] flex justify-center  space-x-10 py-5 bg-gray-200  rounded-b-full max-md:hidden">
         <Link href="/">Home</Link>
-        <Link href="/">Support</Link>
-        <Link href="/">Tips</Link>
-        <Link href="/">Sign in</Link>
+        <Link href="/hotel">Hotels</Link>
+        <Link href="/about">About</Link>
+        <Link href="/contact">Contact</Link>
       </div>
       <div className="rounded-full border border-white text-white py-1 px-3 max-md:hidden">
         get the app
