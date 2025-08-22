@@ -25,7 +25,7 @@ export default function Carousel() {
           0: {
             slidesPerView: 1,
           },
-          400: {
+          330: {
             slidesPerView: 2,
           },
           550: {
@@ -47,7 +47,7 @@ export default function Carousel() {
                 {card.title}
               </h2>
 
-              <div className="min-[950px]:h-96 min-[400px]:max-[950px]:h-80 h-80">
+              <div className="min-[950px]:h-96 min-[450px]:max-[950px]:h-80 min-[330px]:max-[450px]:h-64 h-80">
                 <img
                   src={card.image}
                   alt=""

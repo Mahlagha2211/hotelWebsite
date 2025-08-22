@@ -37,6 +37,7 @@ export default function DrawerNav({ isOpen, setIsOpen }) {
                   <TextInput
                     icon={HiSearch}
                     type="search"
+                
                     placeholder="Search"
                     required
                     size={32}
